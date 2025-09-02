@@ -162,22 +162,31 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">About Me</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="glass-card p-8 fade-in">
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-center">
-                        Detail-oriented software developer with a passion for solving complex problems and building scalable applications. 
-                        Seeking to contribute to innovative solutions while enhancing technical expertise.
-                    </p>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="highlight-card">
+<section id="about" class="py-20 relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <!-- Gradient Animated Heading -->
+    <h2 class="text-5xl font-extrabold text-center mb-12 
+               bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 
+               bg-clip-text text-transparent animate-gradient">
+      About Me
+    </h2>
+
+    <div class="max-w-4xl mx-auto">
+      <!-- Glass Card with Animation -->
+      <div class="glass-card p-10 text-center transform scale-95 opacity-0 animate-zoomIn floating">
+        <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
+          I am an aspiring software developer with strong skills in web technologies and full-stack development. 
+          Passionate about building efficient, user-friendly digital solutions, I bring hands-on experience from 
+          internships and personal projects, along with a solid foundation in data structures, algorithms, and 
+          modern frameworks. I enjoy solving problems, exploring new technologies, and contributing to impactful innovations.
+        </p>
+                    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"> -->
+                        <!-- <div class="highlight-card">
                             <i class="fas fa-rocket text-blue-500 text-2xl mb-3"></i>
                             <h4 class="font-semibold mb-2">Scalable Solutions</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400">Building efficient and scalable applications</p>
-                        </div>
-                        <div class="highlight-card">
+                        </div> -->
+                        <!-- <div class="highlight-card">
                             <i class="fas fa-palette text-purple-500 text-2xl mb-3"></i>
                             <h4 class="font-semibold mb-2">UI/UX Focus</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400">Enhanced user engagement by 30%</p>
@@ -191,8 +200,8 @@
                             <i class="fas fa-trophy text-yellow-500 text-2xl mb-3"></i>
                             <h4 class="font-semibold mb-2">Award Winner</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400">1st place in technical hackathon</p>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
