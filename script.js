@@ -54,7 +54,7 @@ const portfolioData = {
             technologies: ["HTML", "Tailwind CSS", "JavaScript", "CSS3"],
             image: "blue-line-flat-circle-portfolio-vector-16457681.webp",
             github: "https://github.com/sanjivani1318/portfolio",
-            liveDemo: "https://sanjivani-portfolio.com",
+            liveDemo: "https://portfolio-lac-zeta-31.vercel.app/",
             featured: false
         }
     ],
