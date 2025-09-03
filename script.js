@@ -27,24 +27,24 @@ const portfolioData = {
         { name: "Full Stack", category: "Web", icon: "fas fa-layer-group" }
     ],
     projects: [
-        {
-            title: "CropCycle",
-            category: "Web",
-            description: "AI-driven Sustainable Farming & Market Linkages application empowering farmers with smart crop planning, sustainable practices, and market access.",
-            technologies: ["HTML", "CSS", "JavaScript", "PHP", "AI/ML"],
-            image: "https://via.placeholder.com/400x250/10b981/ffffff?text=CropCycle+AI",
-            github: "https://github.com/sanjivani/cropcycle",
-            liveDemo: "https://cropcycle.example.com",
-            featured: true
-        },
+        // {
+        //     title: "CropCycle",
+        //     category: "Web",
+        //     description: "AI-driven Sustainable Farming & Market Linkages application empowering farmers with smart crop planning, sustainable practices, and market access.",
+        //     technologies: ["HTML", "CSS", "JavaScript", "PHP", "AI/ML"],
+        //     image: "https://via.placeholder.com/400x250/10b981/ffffff?text=CropCycle+AI",
+        //     github: "https://github.com/sanjivani/cropcycle",
+        //     liveDemo: "https://cropcycle.example.com",
+        //     featured: true
+        // },
         {
             title: "Pradnya AI",
             category: "Web",
             description: "Full-Stack AI-powered chat application allowing user authentication, real-time AI responses, and chat history management.",
             technologies: ["Next.js", "React.js", "MongoDB", "Clerk", "DeepSeek API"],
             image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Pradnya+AI",
-            github: "https://github.com/sanjivani/pradnya-ai",
-            liveDemo: "https://pradnya-ai.example.com",
+            github: "https://github.com/sanjivani1318/deepseek",
+            // liveDemo: "https://pradnya-ai.example.com",
             featured: true
         },
         {
@@ -52,8 +52,8 @@ const portfolioData = {
             category: "Web",
             description: "Modern, responsive portfolio website built with HTML, Tailwind CSS, and vanilla JavaScript featuring dark mode and smooth animations.",
             technologies: ["HTML", "Tailwind CSS", "JavaScript", "CSS3"],
-            image: "https://via.placeholder.com/400x250/3b82f6/ffffff?text=Portfolio",
-            github: "https://github.com/sanjivani/portfolio",
+            image: "blue-line-flat-circle-portfolio-vector-16457681.webp",
+            github: "https://github.com/sanjivani1318/portfolio",
             liveDemo: "https://sanjivani-portfolio.com",
             featured: false
         }
@@ -83,30 +83,30 @@ const portfolioData = {
                 "Gained hands-on experience in web development lifecycle"
             ]
         },
-        {
-            dateRange: "08/2024 - Present",
-            title: "B.Tech in Computer Science",
-            company: "Sinhgad College of Engineering, Pune",
-            location: "Pune, India",
-            type: "education",
-            details: [
-                "Current CGPA: 8.59",
-                "Focus on software engineering, data structures, and algorithms",
-                "Active participation in technical competitions and hackathons"
-            ]
-        },
-        {
-            dateRange: "07/2021 - 06/2024",
-            title: "Diploma in Information Technology",
-            company: "Puranmal Lahoti Government Polytechnic",
-            location: "Latur, Maharashtra", 
-            type: "education",
-            details: [
-                "Percentage: 90.63%",
-                "Won 1st place in technical hackathon",
-                "Strong foundation in programming and web technologies"
-            ]
-        }
+        // {
+        //     dateRange: "08/2024 - Present",
+        //     title: "B.Tech in Computer Science",
+        //     company: "Sinhgad College of Engineering, Pune",
+        //     location: "Pune, India",
+        //     type: "education",
+        //     details: [
+        //         "Current CGPA: 8.59",
+        //         "Focus on software engineering, data structures, and algorithms",
+        //         "Active participation in technical competitions and hackathons"
+        //     ]
+        // },
+        // {
+        //     dateRange: "07/2021 - 06/2024",
+        //     title: "Diploma in Information Technology",
+        //     company: "Puranmal Lahoti Government Polytechnic",
+        //     location: "Latur, Maharashtra", 
+        //     type: "education",
+        //     details: [
+        //         "Percentage: 90.63%",
+        //         "Won 1st place in technical hackathon",
+        //         "Strong foundation in programming and web technologies"
+        //     ]
+        // }
     ]
 };
 
@@ -819,3 +819,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update active link on page load
     updateActiveNavLink();
 });
+
+
+/* -----------------------------
+   Custom Cursor Effect
+----------------------------- */
+const cursor = document.getElementById("custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+// Click scale effect
+document.addEventListener("mousedown", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
+});
+document.addEventListener("mouseup", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(1)";
+});
+

@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-indigo-900 transition-all duration-500">
+    <!-- Custom Cursor -->
+<div id="custom-cursor" class="fixed w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-150 ease-out"></div>
+
     <!-- Animated Background -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div class="floating-shapes">
@@ -40,7 +43,7 @@
 <nav id="site-header" class="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-50 transition-all duration-300 shadow-lg border-b border-gray-200/20 dark:border-gray-700/20">
     <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold text-gradient">SJ</div>
+            <div class="text-2xl font-bold text-gradient">Sanjivani Jadhav</div>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
@@ -95,7 +98,7 @@
                             
                             <!-- Profile Image -->
                             <div class="relative w-80 h-80 mx-auto">
-                                <img src="WhatsApp Image 2025-07-26 at 00.45.37_f2286ecb.jpg" 
+                                <img src="profilepic.jpg" 
                                      alt="Sanjivani Jadhav" 
                                      class="profile-hero-image w-full h-full object-cover rounded-full border-8 border-white/20 shadow-2xl">
                                 
@@ -131,6 +134,13 @@
                             <a href="#contact" class="btn-secondary group">
                                 <i class="fas fa-envelope mr-2 group-hover:animate-bounce"></i>Get In Touch
                             </a>
+                            <a href="Jadhav Sanjivani resume.pdf" download
+     class="px-6 py-3 font-semibold border border-transparent text-white 
+            bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 
+            bg-size-200 bg-pos-0 hover:bg-pos-100
+            shadow-lg transition-all duration-500 ease-in-out">
+    <i class="fas fa-file-download mr-2"></i> Download Resume
+  </a>
                         </div>
 
                         <!-- Social Links -->
@@ -141,6 +151,10 @@
                             <a href="https://github.com/sanjivani1318" class="social-link-hero group">
                                 <i class="fab fa-github group-hover:animate-spin"></i>
                             </a>
+                            <a href="https://leetcode.com/Sanjivani1308/" target="_blank" class="social-link">
+  <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode" class="w-6 h-6">
+</a>
+
                             <a href="mailto:jadhavsanjivani480@gmail.com" class="social-link-hero group">
                                 <i class="fas fa-envelope group-hover:animate-pulse"></i>
                             </a>
@@ -160,6 +174,7 @@
             </a>
         </div>
     </section>
+    
 
     <!-- About Section -->
 <section id="about" class="py-20 relative overflow-hidden">
@@ -173,13 +188,15 @@
 
     <div class="max-w-4xl mx-auto">
       <!-- Glass Card with Animation -->
-      <div class="glass-card p-10 text-center transform scale-95 opacity-0 animate-zoomIn floating">
-        <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
-          I am an aspiring software developer with strong skills in web technologies and full-stack development. 
-          Passionate about building efficient, user-friendly digital solutions, I bring hands-on experience from 
-          internships and personal projects, along with a solid foundation in data structures, algorithms, and 
-          modern frameworks. I enjoy solving problems, exploring new technologies, and contributing to impactful innovations.
-        </p>
+      <div class="glass-card p-10 text-center transform scale-95 animate-zoomIn floating">
+  <p class="text-lg text-gray-900 dark:text-gray-100 leading-relaxed">
+    I am an aspiring software developer with strong skills in web technologies and full-stack development. 
+    Passionate about building efficient, user-friendly digital solutions, I bring hands-on experience from 
+    internships and personal projects, along with a solid foundation in data structures, algorithms, and 
+    modern frameworks. I enjoy solving problems, exploring new technologies, and contributing to impactful innovations.
+  </p>
+
+
                     <!-- <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"> -->
                         <!-- <div class="highlight-card">
                             <i class="fas fa-rocket text-blue-500 text-2xl mb-3"></i>
@@ -210,33 +227,113 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-50/50 dark:bg-gray-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="max-w-6xl mx-auto">
-                <div class="flex justify-center mb-8 space-x-4 flex-wrap gap-2">
-                    <button class="skill-filter active" data-filter="all">All</button>
-                    <button class="skill-filter" data-filter="Programming">Programming</button>
-                    <button class="skill-filter" data-filter="Web">Web</button>
-                    <button class="skill-filter" data-filter="Database">Database</button>
-                    <button class="skill-filter" data-filter="Mobile">Mobile</button>
-                </div>
-                <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Skills will be populated by JavaScript -->
-                </div>
-            </div>
+            <h2 class="text-5xl font-extrabold text-center mb-12 
+           bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 
+           bg-clip-text text-transparent animate-gradient">
+  Skills & Technologies
+</h2>
+
+           <div class="max-w-6xl mx-auto">
+  <div class="flex justify-center mb-8 space-x-4 flex-wrap gap-2">
+  <button class="skill-filter active px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 
+                 hover:from-purple-600 hover:via-indigo-500 hover:to-blue-500"
+          data-filter="all">
+    All
+  </button>
+
+  <button class="skill-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 
+                 hover:from-blue-500 hover:via-purple-600 hover:to-indigo-500"
+          data-filter="Programming">
+    Programming
+  </button>
+
+  <button class="skill-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600 
+                 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-500"
+          data-filter="Web">
+    Web
+  </button>
+
+  <button class="skill-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 
+                 hover:from-indigo-700 hover:via-purple-600 hover:to-blue-600"
+          data-filter="Database">
+    Database
+  </button>
+
+  <button class="skill-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-indigo-600 via-blue-700 to-purple-700 
+                 hover:from-purple-700 hover:via-blue-700 hover:to-indigo-600"
+          data-filter="Mobile">
+    Mobile
+  </button>
+</div>
+
+  <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Skills will be populated by JavaScript -->
+  </div>
+</div>
+
+
+  <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Skills will be populated by JavaScript -->
+  </div>
+</div>
+
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="text-5xl font-extrabold text-center mb-12 
+           bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 
+           bg-clip-text text-transparent animate-gradient">
+  Featured Projects
+</h2>
+
             <div class="max-w-6xl mx-auto">
-                <div class="flex justify-center mb-8 space-x-4 flex-wrap gap-2">
-                    <button class="project-filter active" data-filter="all">All Projects</button>
-                    <button class="project-filter" data-filter="Web">Web Apps</button>
-                    <button class="project-filter" data-filter="Mobile">Mobile Apps</button>
-                    <button class="project-filter" data-filter="UI/UX">UI/UX</button>
-                </div>
+             <div class="flex justify-center mb-8 space-x-4 flex-wrap gap-2">
+  <button class="project-filter active px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 
+                 hover:from-purple-600 hover:via-indigo-500 hover:to-blue-500"
+          data-filter="all">
+    All Projects
+  </button>
+
+  <button class="project-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 
+                 hover:from-blue-500 hover:via-purple-600 hover:to-indigo-500"
+          data-filter="Web">
+    Web Apps
+  </button>
+
+  <button class="project-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600 
+                 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-500"
+          data-filter="Mobile">
+    Mobile Apps
+  </button>
+
+  <button class="project-filter px-6 py-2 font-semibold text-white text-lg 
+                 rounded-md shadow-md transition-all duration-500 ease-in-out 
+                 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 
+                 hover:from-indigo-700 hover:via-purple-600 hover:to-blue-600"
+          data-filter="UI/UX">
+    UI/UX
+  </button>
+</div>
+
                 <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Projects will be populated by JavaScript -->
                 </div>
@@ -247,7 +344,13 @@
     <!-- Work Experience Timeline (Education Removed) -->
     <section id="experience" class="py-20 bg-gray-50/50 dark:bg-gray-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Work Experience</h2>
+         <h2 class="text-5xl font-extrabold text-center mb-12 
+           bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 
+           bg-clip-text text-transparent animate-gradient">
+  Work Experience
+</h2>
+
+
             <div class="max-w-4xl mx-auto">
                 <div id="timeline" class="relative">
                     <!-- Timeline will be populated by JavaScript with work experience only -->
@@ -259,7 +362,13 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="section-title">Testimonials</h2>
+          <h2 class="text-5xl font-extrabold text-center mb-12 
+           bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 
+           bg-clip-text text-transparent animate-gradient">
+  Testimonials
+</h2>
+
+
             <div class="max-w-4xl mx-auto">
                 <div class="testimonial-slider relative">
                     <div class="testimonial-track">
@@ -272,7 +381,7 @@
                                 </p>
                             </div>
                             <div class="flex items-center justify-center">
-                                <img src="https://via.placeholder.com/60x60/8b5cf6/ffffff?text=BI" 
+                                <img src="brightinfotech.jpeg" 
                                      alt="Bright InfoTech" class="w-12 h-12 rounded-full mr-4">
                                 <div>
                                     <h4 class="font-semibold text-gray-800 dark:text-white">Bright InfoTech Ltd</h4>
@@ -289,7 +398,7 @@
                                 </p>
                             </div>
                             <div class="flex items-center justify-center">
-                                <img src="https://via.placeholder.com/60x60/10b981/ffffff?text=IE" 
+                                <img src="internslite.png" 
                                      alt="InternsElite" class="w-12 h-12 rounded-full mr-4">
                                 <div>
                                     <h4 class="font-semibold text-gray-800 dark:text-white">InternsElite</h4>
@@ -342,6 +451,9 @@
                             <a href="https://github.com/sanjivani1318" class="social-link group">
                                 <i class="fab fa-github group-hover:animate-spin"></i>
                             </a>
+                                                     <a href="https://leetcode.com/Sanjivani1308/" target="_blank" class="social-link">
+  <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode" class="w-6 h-6">
+</a>
                         </div>
                     </div>
                     

@@ -316,6 +316,7 @@ html {
     font-size: 2.5rem;
   }
   
+  
   .shape {
     display: none;
   }
@@ -513,6 +514,11 @@ section {
 
 .floating {
   animation: floating 4s ease-in-out infinite;
+}
+
+
+body {
+  cursor: none; /* hide default cursor */
 }
 
 
