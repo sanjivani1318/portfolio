@@ -20,9 +20,9 @@ const portfolioData = {
         { name: "JavaScript", category: "Web", icon: "fab fa-js-square" },
         { name: "PHP", category: "Web", icon: "fab fa-php" },
         { name: "React.js", category: "Web", icon: "fab fa-react" },
-        { name: "Next.js", category: "Web", icon: "fas fa-rocket" },
+        // { name: "Next.js", category: "Web", icon: "fas fa-rocket" },
         { name: "MySQL", category: "Database", icon: "fas fa-database" },
-        { name: "Firebase", category: "Database", icon: "fas fa-fire" },
+        { name: "MongoDB", category: "Database", icon: "fas fa-fire" },
         { name: "Android Dev", category: "Mobile", icon: "fab fa-android" },
         { name: "Full Stack", category: "Web", icon: "fas fa-layer-group" }
     ],
@@ -38,14 +38,14 @@ const portfolioData = {
         //     featured: true
         // },
         {
-            title: "Pradnya AI",
+            title: "JavaScript Code Corrector: MERN Stack Web Application",
             category: "Web",
-            description: "Full-Stack AI-powered chat application allowing user authentication, real-time AI responses, and chat history management.",
-            technologies: ["Next.js", "React.js", "MongoDB", "Clerk", "DeepSeek API"],
-            image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Pradnya+AI",
-            github: "https://github.com/sanjivani1318/deepseek",
-            // liveDemo: "https://pradnya-ai.example.com",
-            featured: true
+            description: "Developed a full-stack web application using the MERN stack that corrects invalid JavaScript code into valid, optimized code.",
+            technologies: ["JavaScript", "Express.js", "React.js", "Node.js", "Gemini API" ] ,
+            image: "jscoverphoto.jpg",
+            github: "https://github.com/sanjivani1318/Javascript-code-corrector",
+            liveDemo: "https://javascript-code-corrector-1-2ic8.onrender.com",
+            featured: false
         },
         {
             title: "Portfolio Website",
@@ -405,50 +405,50 @@ function initSmoothScrolling() {
 
 // Contact Form Handling
 function initContactForm() {
-    // Initialize EmailJS (replace 'your_user_id' with actual EmailJS user ID)
-    // emailjs.init('your_user_id');
+    // ✅ Initialize EmailJS with your public key
+    emailjs.init("7f6ExzO-17zkdJrvQ");
 
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
 
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
         submitBtn.disabled = true;
 
         try {
-            // EmailJS integration (uncomment and configure)
-            /*
-            await emailjs.send('your_service_id', 'your_template_id', {
-                to_name: 'Sanjivani',
-                from_name: name,
-                from_email: email,
-                message: message,
-            });
-            */
+            // ✅ Send email with EmailJS
+            await emailjs.send(
+                "service_p4fc6vx",   // your service ID
+                "template_2yb8d7a",  // your template ID
+                {
+                    to_name: "Sanjivani",
+                    from_name: name,
+                    from_email: email,
+                    message: message,
+                }
+            );
 
-            // Simulate API call for demo
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            // Show success message
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            // ✅ Show success message
+            showNotification("Message sent successfully! I'll get back to you soon.", "success");
             contactForm.reset();
-            
+
         } catch (error) {
-            console.error('Error sending message:', error);
-            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
+            console.error("Error sending message:", error);
+            showNotification("Sorry, there was an error sending your message. Please try again.", "error");
         } finally {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }
     });
 }
+
 
 // Notification System
 function showNotification(message, type = 'info') {
